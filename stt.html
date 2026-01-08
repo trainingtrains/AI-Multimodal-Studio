@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speech to Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Speech to Text</p>
+</header>
+
+<div class="container">
+  <button onclick="start()">Start Speaking</button>
+  <div id="out" class="output"></div>
+
+  <a href="index.html" class="back">⬅ Back</a>
+</div>
+
+<script>
+let r = new webkitSpeechRecognition();
+r.lang = "en-US";
+
+function start() {
+  r.start();
+}
+
+r.onresult = e => {
+  document.getElementById("out").innerText = e.results[0][0].transcript;
+};
+</script>
+
+</body>
+</html>

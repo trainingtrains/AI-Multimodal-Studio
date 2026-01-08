@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Script Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Script & Content Generator</p>
+</header>
+
+<div class="container">
+  <textarea id="topic" rows="3"
+   placeholder="Enter topic"></textarea>
+  <button onclick="gen()">Generate</button>
+  <div id="res" class="output"></div>
+
+  <a href="index.html" class="back">⬅ Back</a>
+</div>
+
+<script>
+function gen(){
+  let t=document.getElementById("topic").value;
+  document.getElementById("res").innerHTML =
+   "This script explains <b>"+t+
+   "</b> using AI based logic (demo).";
+}
+</script>
+
+</body>
+</html>

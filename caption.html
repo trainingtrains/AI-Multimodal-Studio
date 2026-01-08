@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Caption Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Image Caption Generator</p>
+</header>
+
+<div class="container">
+
+  <input type="file" id="imgInput" accept="image/*" onchange="generateCaption()">
+
+  <br><br>
+
+  <!-- Image Preview -->
+  <img id="preview" style="max-width:100%; display:none; border-radius:12px;">
+
+  <!-- Caption Output -->
+  <div id="caption" class="output">
+    Please select an image to generate caption.
+  </div>
+
+  <a href="index.html" class="back">⬅ Back</a>
+
+</div>
+
+<script>
+function generateCaption() {
+  const input = document.getElementById("imgInput");
+  const preview = document.getElementById("preview");
+  const caption = document.getElementById("caption");
+
+  if (input.files.length === 0) return;
+
+  const file = input.files[0];
+  const name = file.name.toLowerCase();
+
+  // Show image preview
+  preview.src = URL.createObjectURL(file);
+  preview.style.display = "block";
+
+  // Demo AI caption logic
+  let text = "An image with visual elements";
+
+  if (name.includes("person") || name.includes("man") || name.includes("woman")) {
+    text = "A person captured in the image";
+  } 
+  else if (name.includes("nature") || name.includes("tree") || name.includes("mountain")) {
+    text = "A beautiful natural scenery";
+  } 
+  else if (name.includes("car") || name.includes("bike")) {
+    text = "A vehicle shown in the image";
+  } 
+  else if (name.includes("dog") || name.includes("cat")) {
+    text = "An animal present in the image";
+  }
+
+  caption.innerHTML = "<b>Generated Caption:</b> " + text;
+}
+</script>
+
+</body>
+</html>

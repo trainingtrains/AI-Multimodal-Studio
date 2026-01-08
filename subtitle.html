@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Subtitle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Auto Subtitle Generator</p>
+</header>
+
+<div class="container">
+  <input type="file">
+  <button onclick="sub()">Generate Subtitle</button>
+  <div id="sub" class="output"></div>
+
+  <a href="index.html" class="back">⬅ Back</a>
+</div>
+
+<script>
+function sub() {
+  document.getElementById("sub").innerText =
+    "This is an AI-generated subtitle (demo).";
+}
+</script>
+
+</body>
+</html>

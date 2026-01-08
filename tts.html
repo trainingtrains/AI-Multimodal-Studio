@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text to Speech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Text to Speech Converter</p>
+</header>
+
+<div class="container">
+  <textarea id="text" rows="4" placeholder="Enter text..."></textarea>
+  <button onclick="speak()">Convert to Speech</button>
+
+  <a href="index.html" class="back">⬅ Back</a>
+</div>
+
+<script>
+function speak() {
+  let t = document.getElementById("text").value;
+  let speech = new SpeechSynthesisUtterance(t);
+  window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>

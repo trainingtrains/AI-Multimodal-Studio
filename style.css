@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  color: #5a2dcb;
+  font-size: 32px;
+}
+
+header p {
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Homepage cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+textarea, input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Buttons */
+button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Output box */
+.output {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f3f4ff;
+  border-left: 5px solid #667eea;
+  border-radius: 10px;
+}
+
+/* Back link */
+.back {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #5a2dcb;
+  font-weight: bold;
+}

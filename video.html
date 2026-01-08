@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text to Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Multimodal Studio</h1>
+  <p>Text to Video Slideshow</p>
+</header>
+
+<div class="container">
+  <textarea id="txt" rows="4"
+   placeholder="Each line = one slide"></textarea>
+  <button onclick="play()">Create Slideshow</button>
+  <div id="slide" class="output"></div>
+
+  <a href="index.html" class="back">⬅ Back</a>
+</div>
+
+<script>
+let s=[],i=0;
+function play(){
+  s=document.getElementById("txt").value.split("\n");
+  i=0; show();
+}
+function show(){
+  if(i<s.length){
+    document.getElementById("slide").innerText=s[i++];
+    setTimeout(show,2000);
+  }
+}
+</script>
+
+</body>
+</html>
